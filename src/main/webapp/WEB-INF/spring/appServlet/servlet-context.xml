@@ -26,7 +26,7 @@
 	
 	<beans:bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <beans:property name="driverClassName" value="org.postgresql.Driver" />
-        <beans:property name="url" value="jdbc:postgresql://localhost:5432/Institucion2" />
+        <beans:property name="url" value="jdbc:postgresql://localhost:5432/Toretto" />
         <beans:property name="username" value="postgres" />
         <beans:property name="password" value="victor" />
     </beans:bean>
@@ -35,7 +35,7 @@
         <beans:property name="dataSource" ref="dataSource" />
         <beans:property name="annotatedClasses">
             <beans:list>
-              <beans:value>com.smartkode.toretto.entidad.Alumno</beans:value>
+              <beans:value>com.smartkode.toretto.entidad.Pelicula</beans:value>
             </beans:list>
         </beans:property>
         <beans:property name="hibernateProperties">
@@ -46,12 +46,12 @@
             </beans:props>
         </beans:property>
     </beans:bean>
-	<beans:bean id="AlumnoDAO" class="com.smartkode.toretto.DAO.AlumnoDAOImp">
+	<beans:bean id="PeliculaDAO" class="com.smartkode.toretto.DAO.PeliculaDAOImp">
         <beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
     </beans:bean>	
     
-    <beans:bean id="AlumnoService" class="com.smartkode.toretto.Service.AlumnoServiceImp">
-        <beans:property name="alumnoDAO" ref="AlumnoDAO"></beans:property>
+    <beans:bean id="PeliculaService" class="com.smartkode.toretto.Service.PeliculaServiceImp">
+        <beans:property name="peliculaDAO" ref="PeliculaDAO"></beans:property>
     </beans:bean>
 		
 	

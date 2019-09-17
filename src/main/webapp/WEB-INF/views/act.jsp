@@ -11,38 +11,43 @@
 	RAPIDOS Y FURIOSOS  
 	
 </h1>
-<a href="/toretto"> <input class="button" type="button" value="REGRESAR"> </a>
-<form:form method="POST" action="${pageContext.request.contextPath}/agregar.html" commandName="alu">
+
+
+<form:form method="POST" action="${pageContext.request.contextPath}/actualizar.html" commandName="peli">
 <table>
 <tbody>
 <tr>
 		
 
 		<tr>
-		<td>NO. de pelicula:</td>
-		<td><form:input path="No_pelicula" /></td>
+		<td><form:input path="No_pelicula" type="hidden" value="${peli.no_pelicula}" /></td>
 	</tr>
 	<tr>
 		<td>Nombre:</td>
-		<td><form:input path="nombre" /></td>
+		<td><form:input path="nombre" value="${peli.nombre}" /></td>
+		           
+   
 	</tr>
 		<tr>
 		<td>Parte de la historia:</td>
-		<td><form:input path="parte_historia" /></td>
+		<td><form:input path="parte_historia" value="${peli.parte_historia}" /></td>
+		
+
 		
 	<tr>
 	</tr>
 		<tr>
 		<td>Año:</td>
-		<td><form:input path="año" /></td>
+		<td><form:input path="año" value="${peli.año}" /></td>
+		 
 		
 	<tr>
-		<td><input type="submit" value="Adicionar" /></td>
+		<td><input type="submit" value="Actualizar" /></td>
 		<td></td>
 	</tr>
 </tbody>
 </table>
 </form:form>
-        
+
 </body>
 </html>

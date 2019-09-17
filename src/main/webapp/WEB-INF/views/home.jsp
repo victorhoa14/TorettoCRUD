@@ -6,13 +6,16 @@
 </head>
 <body>
 <h1>
-	Hello world!  
+	RAPIDOS Y FURIOSOS  
 </h1>
 
-<P>  The time on the server is ${serverTime}. </P>
 
-<p>ALUMNOS</p>
-<a href="add"> <input class="button" type="button" value="AGREGAR USUARIO"> </a>
+
+
+<a href="add"><input class="button" type="button" value="AGREGAR PELICULA "></a>
+<br>
+<br>
+<a href="peliculas"><input class="button" type="button" value="ACTUALIZAR PELICULA"></a>
 
 </body>
 </html>
