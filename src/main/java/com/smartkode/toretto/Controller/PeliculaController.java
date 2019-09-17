@@ -58,7 +58,7 @@ private static final Logger logger = LoggerFactory.getLogger(PeliculaController.
     @RequestMapping(value = "/agregar", method = RequestMethod.POST)
     //@PostMapping("/create")
     public String create(Pelicula alu, Model model) {
-    if(alu==null)
+    if(alu!=null)
     {
     this.peliculaservice.addPelicula(alu);
     }
